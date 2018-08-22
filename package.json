@@ -1,0 +1,15 @@
+{
+  "name": "worker-dom-test",
+  "version": "1.0.0",
+  "description": "A test of https://github.com/ampproject/worker-dom",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@ampproject/worker-dom": "^0.1.0",
+    "express": "^4.16.3"
+  }
+}
