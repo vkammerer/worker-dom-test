@@ -5,12 +5,11 @@ const port = process.env.PORT || 8080;
 const root = path.resolve(__dirname);
 
 const serverStarted = () => {
-  console.log("Server started", host, port);
-  console.log("Root directory", root);
+  console.log(`Server started at: http://${host}:${port}`);
   console.log("Press Ctrl+C to exit...\n");
 }
   
 const app = express();
-app.use(express.static(root));
+app.use(express.static(root + '/docs'));
 const server = app.listen(port, host, serverStarted);
 

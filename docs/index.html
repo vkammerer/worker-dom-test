@@ -4,13 +4,10 @@
   <meta charset="utf-8" />
   <title>Worker Dom Test</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="../node_modules/@ampproject/worker-dom/dist/index.mjs" type="module"></script>
+  <script src="./worker-dom-dist/index.mjs" type="module"></script>
 </head>
 <body>
-  <div src="./src/myworker.js" id="my-script"><div class="root"><button>prompt</button></div></div>
-  <script type="module">
-    import {upgradeElement} from '../node_modules/@ampproject/worker-dom/dist/index.mjs';
-    upgradeElement(document.querySelector('#my-script'), '../node_modules/@ampproject/worker-dom/dist/worker.mjs');
-  </script>
+  <div src="./src/my-worker.js" id="my-script"><div class="root"><button>prompt</button></div></div>
+  <script src="./src/my-app.js" type="module"></script>
 </body>
 </html>
