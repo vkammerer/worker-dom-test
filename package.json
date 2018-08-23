@@ -4,7 +4,7 @@
   "description": "A test of https://github.com/ampproject/worker-dom",
   "main": "index.js",
   "scripts": {
-    "dev": "cp -a node_modules/@ampproject/worker-dom/dist/. docs/worker-dom-dist && node server"
+    "start": "cp -a node_modules/@ampproject/worker-dom/dist/. docs/worker-dom-dist && node server"
   },
   "author": "",
   "license": "MIT",
