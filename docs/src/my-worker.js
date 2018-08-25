@@ -1,15 +1,14 @@
-const root = document.createElement('div');
-const btn = document.createElement('button');
-const text = document.createTextNode('Insert Hello World!');
+/*
+  https://github.com/ampproject/worker-dom/issues/10
+  Necessary to enable hydration of empty element
+*/
+const sync = document.createElement('div');
+document.body.appendChild(sync);
 
-root.className = "root";
-btn.appendChild(text);
-root.appendChild(btn);
+const init = () => {
+  const mySpan = document.createElement('span');
+  mySpan.appendChild(document.createTextNode('Hello world'));
+  document.body.appendChild(mySpan);
+};
 
-btn.addEventListener('click', () => {
-  const h1 = document.createElement('h1');
-  h1.textContent = 'Hello World!'
-  document.body.appendChild(h1);
-});
-
-document.body.appendChild(root);
+setTimeout(init, 0);
